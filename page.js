@@ -4,4 +4,5 @@ const menu = document.getElementById('menu');
 burger.addEventListener('click', () => {
   menu.classList.toggle('open');
   burger.classList.toggle('open');
+  document.body.classList.toggle('menu-open');
 });

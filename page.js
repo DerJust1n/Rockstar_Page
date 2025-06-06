@@ -7,7 +7,6 @@ burger.addEventListener('click', () => {
   document.body.classList.toggle('menu-open');
 });
 
-
 VANTA.FOG({
   el: "#background",
   mouseControls: true,

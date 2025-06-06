@@ -9,6 +9,8 @@
     </head>
 
     <body>
+        <div id="background"></div>
+
         <!-- Header mit Navigation -->
         <header>
             <div class="burger" id="burger">
@@ -16,17 +18,6 @@
                 <div></div>
                 <div></div>
             </div>
-
-            <!-- Logo mittig -->
-        <div class="logo">
-            <img src="pictures/logo-rockstar.png" alt="Rockstar Logo">
-        </div>
-
-        <!-- Icons oben rechts -->
-        <div class="header-icons">
-            <i class="fa-solid fa-bag-shopping"></i>
-            <img src="https://via.placeholder.com/36" alt="Profilbild" class="header-profile">
-        </div>
 
             <!-- Menü Overlay -->
             <nav class="menu-overlay" id="menu">
@@ -47,7 +38,12 @@
                 </div>
             </nav>
 
-            <!-- Desktop-Navigation -->
+            <!-- Logo mittig -->
+        <div class="logo">
+            <img src="pictures/logo-rockstar.png" alt="Rockstar Logo">
+        </div>
+
+        <!-- Desktop-Navigation -->
             <nav class="nav-bar">
                 <a href="#home" class="active"><i class="fas fa-house"></i> Home</a>
                 <a href="#blog"><i class="fa-solid fa-book-open"></i> Blog</a>
@@ -55,6 +51,12 @@
                 <a href="#quiz"><i class="fa-solid fa-flag-checkered"></i> Quiz</a>
                 <a href="#shop"><i class="fas fa-cart-shopping"></i> Shop</a>
             </nav>
+
+        <!-- Icon & Logo -->
+        <div class="header-icons">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <img src="https://via.placeholder.com/36" alt="Profilbild" class="header-profile">
+        </div>
         </header>
 
         <!-- Hauptinhalt -->
@@ -68,6 +70,8 @@
             </p>
         </div>
 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.fog.min.js"></script>
         <script src="page.js"></script>
     </body>
 </html>

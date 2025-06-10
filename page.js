@@ -7,6 +7,26 @@ burger.addEventListener('click', () => {
   document.body.classList.toggle('menu-open');
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const openSearch = document.getElementById("open-search");
+  const closeSearch = document.getElementById("close-search");
+  const blogMenu = document.querySelector(".blog-menu");
+  const searchInput = document.querySelector(".search-input");
+
+  // Suchfeld öffnen
+  openSearch.addEventListener("click", () => {
+    blogMenu.classList.add("search-active");
+    searchInput.focus();
+  });
+
+  // Suchfeld schließen
+  closeSearch.addEventListener("click", () => {
+    blogMenu.classList.remove("search-active");
+    searchInput.value = "";
+  });
+});
+
+// Hintergrund
 VANTA.FOG({
   el: "#background",
   mouseControls: true,
@@ -60,10 +80,20 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 // Service Worker Registrierung
-if ('serviceWorker' in navigator) {
+// if ('serviceWorker' in navigator) {
+//   window.addEventListener('load', () => {
+//     navigator.serviceWorker.register('/sw.js')
+//       .then(reg => console.log('Service Worker registered:', reg))
+//       .catch(err => console.error('Service Worker registration failed:', err));
+//   });
+// }
+
+if ('serviceWorker' in navigator && location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('/sw.js')
       .then(reg => console.log('Service Worker registered:', reg))
       .catch(err => console.error('Service Worker registration failed:', err));
   });
+} else {
+  console.log('Service Worker wird im Dev-Modus nicht registriert.');
 }

@@ -286,6 +286,102 @@ header::before {
 
 
 
+/* Blog-Seite */
+.blog-menu {
+  position: fixed;
+  top: calc(80px + env(safe-area-inset-top));
+  left: calc(20px + env(safe-area-inset-left));
+  right: calc(20px + env(safe-area-inset-right));
+  display: flex;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  padding: 10px 20px;
+  gap: 25px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  z-index: 999;
+}
+
+.menu-links {
+  display: flex;
+  gap: 25px;
+}
+
+.menu-links a {
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.menu-links a.active {
+  color: orangered;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .menu-links a:hover {
+    color: #555;
+  }
+}
+
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  gap: 10px;
+}
+
+/* Suchfeld standardmäßig ausgeblendet */
+.search-input {
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  background-color: #f0f0f0;
+  flex: 1;
+}
+
+/* Icons Standard */
+.search-icon,
+.close-icon {
+  font-size: 18px;
+  color: black;
+  cursor: pointer;
+}
+
+.blog-menu:not(.search-active) .close-icon, .search-input {
+  display: none;
+}
+
+/* Wenn Suche aktiv */
+.blog-menu.search-active .menu-links {
+  display: none;
+}
+
+.blog-menu.search-active .search-wrapper {
+  flex: 1;
+}
+
+.blog-menu.search-active .search-input {
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.blog-menu.search-active .close-icon {
+  display: block;
+}
+
+.blog-menu.search-active .search-icon {
+  order: -1;
+}
+
+
+
 
 /* Ab 550px: Username anzeigen */
 @media (min-width: 550px) {

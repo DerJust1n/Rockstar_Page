@@ -63,14 +63,22 @@
         </header>
 
         <!-- Hauptinhalt -->
-        <div class="content">
-            <h1>Willkommen auf meiner Website</h1>
-            <p>
-            Dies ist ein Beispieltext für die Startseite. Der Hintergrund ist schwarz, das Menü weiß und das Burger-Icon wechselt die Farbe beim Öffnen.
-            </p>
-            <p>
-            Du kannst diesen Bereich beliebig erweitern. Das Menü wird beim Öffnen vor diesen Inhalt gelegt.
-            </p>
+        <div class="blog-menu">
+            <div class="menu-links">
+                <a href="#" class="active">Blog</a>
+                <a href="#">FAQs</a>
+                <a href="#">How-To...</a>
+            </div>
+
+            <div class="search-wrapper">
+                <i class="fas fa-search search-icon" id="open-search"></i>
+                <input type="text" class="search-input" placeholder="Suchen...">
+                <i class="fas fa-times close-icon" id="close-search"></i>
+            </div>
+        </div>
+        
+        <div class="blog-content">
+            
         </div>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
